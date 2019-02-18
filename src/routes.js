@@ -6,8 +6,12 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   $urlRouterProvider.otherwise('/');
 
   $stateProvider
-    .state('app', {
+    .state('landing', {
       url: '/',
+      component: 'landing'
+    })
+    .state('app', {
+      url: '/app',
       component: 'app'
     });
 }
