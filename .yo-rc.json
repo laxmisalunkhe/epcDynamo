@@ -1,0 +1,19 @@
+{
+  "generator-fountain-angular1": {
+    "version": "1.0.0",
+    "props": {
+      "resolved": "C:\\Users\\LSalunke\\AppData\\Roaming\\nvm\\v8.10.0\\node_modules\\generator-fountain-angular1\\generators\\app\\index.js",
+      "namespace": "fountain-angular1:app",
+      "_": [],
+      "framework": "angular1",
+      "modules": "webpack",
+      "js": "babel",
+      "css": "scss",
+      "ci": [
+        "jenkins"
+      ],
+      "sample": "todoMVC",
+      "router": "uirouter"
+    }
+  }
+}
