@@ -7,7 +7,7 @@
                 <div class="container-fluid p-0">
                     <div class="row no-gutters">
                         <div class="col-lg-4 col-sm-6">
-                            <a class="providers-box" href="../../../img/providers/fullsize/1.jpg">
+                            <a class="providers-box" ng-click="$ctrl.showPreviewNotificationModal()">
                                 <img class="img-fluid" src="../../../img/providers/thumbnails/1.jpg" alt="">
                                 <div class="providers-box-caption">
                                     <div class="project-category text-white-50">
@@ -20,7 +20,7 @@
                             </a>
                         </div>
                         <div class="col-lg-4 col-sm-6">
-                            <a class="providers-box" href="../../../img/providers/fullsize/2.jpg">
+                            <a class="providers-box" ng-click="$ctrl.showPreviewNotificationModal()">
                                 <img class="img-fluid" src="../../../img/providers/thumbnails/2.jpg" alt="">
                                 <div class="providers-box-caption">
                                     <div class="project-category text-white-50">
@@ -33,7 +33,7 @@
                             </a>
                         </div>
                         <div class="col-lg-4 col-sm-6">
-                            <a class="providers-box" href="../../../img/providers/fullsize/3.jpg">
+                            <a class="providers-box" ng-click="$ctrl.showPreviewNotificationModal()">
                                 <img class="img-fluid" src="../../../img/providers/thumbnails/3.jpg" alt="">
                                 <div class="providers-box-caption">
                                     <div class="project-category text-white-50">
@@ -46,7 +46,7 @@
                             </a>
                         </div>
                         <div class="col-lg-4 col-sm-6">
-                            <a class="providers-box" href="../../../img/providers/fullsize/4.jpg">
+                            <a class="providers-box" ng-click="$ctrl.showPreviewNotificationModal()">
                                 <img class="img-fluid" src="../../../img/providers/thumbnails/4.jpg" alt="">
                                 <div class="providers-box-caption">
                                     <div class="project-category text-white-50">
@@ -59,7 +59,7 @@
                             </a>
                         </div>
                         <div class="col-lg-4 col-sm-6">
-                            <a class="providers-box" href="../../../img/providers/fullsize/5.jpg">
+                            <a class="providers-box" ng-click="$ctrl.showPreviewNotificationModal()">
                                 <img class="img-fluid" src="../../../img/providers/thumbnails/5.jpg" alt="">
                                 <div class="providers-box-caption">
                                     <div class="project-category text-white-50">
@@ -72,7 +72,7 @@
                             </a>
                         </div>
                         <div class="col-lg-4 col-sm-6">
-                            <a class="providers-box" href="../../../img/providers/fullsize/6.jpg">
+                            <a class="providers-box" ng-click="$ctrl.showPreviewNotificationModal()">
                                 <img class="img-fluid" src="../../../img/providers/thumbnails/6.jpg" alt="">
                                 <div class="providers-box-caption p-3">
                                     <div class="project-category text-white-50">
@@ -91,3 +91,20 @@
         </form>
     </div>
 </header>
+<script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">I'm a modal!</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+        <ul>
+            <li ng-repeat="item in $ctrl.items">
+                <a href="#" ng-click="$event.preventDefault(); $ctrl.selected.item = item">{{ item }}</a>
+            </li>
+        </ul>
+        Selected: <b>{{ $ctrl.selected.item }}</b>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">OK</button>
+        <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+    </div>
+</script>

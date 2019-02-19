@@ -21,5 +21,9 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('previewTemplate', {
       ur: 'previewTemplate',
       component: 'previewTemplate'
+    })
+    .state('previewFrame', {
+      ur: 'previewFrame',
+      component: 'previewFrame'
     });
 }

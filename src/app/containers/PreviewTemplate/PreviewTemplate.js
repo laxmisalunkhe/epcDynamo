@@ -1,7 +1,9 @@
 /* eslint-disable */
 class PreviewTemplateController {
-  constructor($state) {
+  constructor($state, $sce) {
     this.$state = $state;
+    this.$sce = $sce;
+    this.currentProjectUrl = 'http://localhost:3000/template.html';
   }
 }
 

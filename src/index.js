@@ -6,6 +6,7 @@ import {App} from './app/containers/App/App';
 import {Landing} from './app/containers/Landing/Landing';
 import {ChooseTemplate} from './app/containers/ChooseTemplate/ChooseTemplate';
 import {PreviewTemplate} from './app/containers/PreviewTemplate/PreviewTemplate';
+import {PreviewFrame} from './app/containers/PreviewFrame/PreviewFrame';
 import 'angular-ui-router';
 import routesConfig from './routes';
 
@@ -18,4 +19,5 @@ angular
   .component('app', App)
   .component('landing', Landing)
   .component('chooseTemplate', ChooseTemplate)
-  .component('previewTemplate', PreviewTemplate);
+  .component('previewTemplate', PreviewTemplate)
+  .component('previewFrame', PreviewFrame);
