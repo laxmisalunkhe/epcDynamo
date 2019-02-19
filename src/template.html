@@ -1,16 +1,36 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <base href="/">
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Preview Partner Connect Dynamo</title>
-  </head>
+    <link href="css/creative.css" rel="stylesheet">
+</head>
 
-  <body ng-app="app" id="page-top">
-      
-    <h3>MM Read Only Mode</h3>
-    <img src="/app/templates/landing.JPG"/>
+<body ng-app="app" id="page-top">
+    <section id="providers">
+        <div class="container-fluid p-0">
+            <div class="row no-gutters">
+                <div class="col-lg-12 col-sm-12">
+                    <a class="providers-box">
+                        <img class="img-fluid" src="img/templates/order.JPG">
+                        <div class="providers-box-caption">
+                            <div class="project-category text-white-50">
+                                <button class="btn btn-success" type="submit" ng-click="$ctrl.customize()">Customize Template</button>
+                            </div>
+                            <br>
+                            <div class="project-name">
+                                <button class="btn btn-success" type="submit" ng-click="$ctrl.useSelectedTemplate()">Use Selected Template</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>

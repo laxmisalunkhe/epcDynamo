@@ -1,0 +1,53 @@
+<!-- Masthead -->
+<header class="masthead custom-payload">
+    <div class="container h-100 main-info-section">
+        <h3>Do you want to customize API payloads?</h3>
+        <button class="btn btn-success" type="submit" ng-click="$ctrl.startCustomizePayload()">Yes</button>
+        <button class="btn btn-success" ng-click="$ctrl.continueSelected()">No</button>
+        <div>
+            <form name="mainInformationForm" class="main" ng-if="$ctrl.customizePayload">
+                <uib-tabset active="active">
+                    <uib-tab index="$index" ng-repeat="apiConfigObj in $ctrl.apiConfigs" heading="API: {{apiConfigObj.title}}" disable="apiConfigObj.disabled">
+                        <div class="row no-gutters">
+                            <div class="col-lg-4 col-sm-4">
+                                <div class="form-group">
+                                    <label for="methodType">Method Type</label>
+                                    <input name="methodType" id="methodType" type="text" placeholder="Method Type Ex. GET, POST" ng-model="apiConfigObj.methodType" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-sm-8">
+                                <div class="form-group">
+                                    <label for="apiURL">URL</label>
+                                    <input name="apiURL" id="apiURL" type="text" placeholder="Enter URL" ng-model="apiConfigObj.url" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col-lg-6 col-sm-6">
+                                <div class="form-group">
+                                    <label for="requestHeader">Request Header</label>
+                                    <textarea name="requestHeader" id="requestHeader" placeholder="Add Request Header" ng-model="apiConfigObj.requestHeader" class="form-control"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col-lg-6 col-sm-6">
+                                <div class="form-group">
+                                    <label for="requestPayload">Request Payload</label>
+                                    <textarea name="requestPayload" id="requestPayload" placeholder="Add Request Payload" ng-model="apiConfigObj.requestPayload" class="form-control"/>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-6">
+                                <div class="form-group">
+                                    <label for="responsePayload">Response Payload</label>
+                                    <textarea name="responsePayload" id="responsePayload" placeholder="Add Request Header" ng-model="apiConfigObj.responsePayload" class="form-control"/>
+                                </div>
+                            </div>
+                        </div>
+                    </uib-tab>
+                </uib-tabset>
+                <button class="btn btn-success" type="submit" ng-click="$ctrl.submit()">Submit</button>
+            </form>
+        </div>
+    </div>
+</header>

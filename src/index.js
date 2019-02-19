@@ -6,7 +6,8 @@ import {App} from './app/containers/App/App';
 import {Landing} from './app/containers/Landing/Landing';
 import {ChooseTemplate} from './app/containers/ChooseTemplate/ChooseTemplate';
 import {PreviewTemplate} from './app/containers/PreviewTemplate/PreviewTemplate';
-import {PreviewFrame} from './app/containers/PreviewFrame/PreviewFrame';
+import {CustomizePayload} from './app/containers/CustomizePayload/CustomizePayload';
+import {Publish} from './app/containers/Publish/Publish';
 import 'angular-ui-router';
 import routesConfig from './routes';
 
@@ -19,5 +20,6 @@ angular
   .component('app', App)
   .component('landing', Landing)
   .component('chooseTemplate', ChooseTemplate)
+  .component('customizePayload', CustomizePayload)
   .component('previewTemplate', PreviewTemplate)
-  .component('previewFrame', PreviewFrame);
+  .component('publish', Publish);

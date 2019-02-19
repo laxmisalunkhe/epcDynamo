@@ -4400,6 +4400,26 @@ input[type="button"].btn-block {
   text-align: center;
 }
 
+.custom-payload .main{
+  margin-top: 20px;
+}
+
+.custom-payload .main-info-section {
+  padding-top: 40px;
+}
+
+.custom-payload .uib-tab.active{
+  background-color: #f4623a;
+}
+
+.custom-payload .uib-tab a{
+  color: #fff;
+}
+
+.custom-payload .tab-pane{
+  padding: 15px 0;
+}
+
 .tab-content > .tab-pane {
   display: none;
 }
@@ -10671,6 +10691,11 @@ header.masthead {
 
 .main-info-section {
   padding-top: 85px;
+}
+
+
+.preview-mode .main-info-section {
+  padding-top: 40px;
 }
 
 header.masthead h1 {

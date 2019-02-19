@@ -19,11 +19,19 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       component: 'chooseTemplate'
     })
     .state('previewTemplate', {
-      ur: 'previewTemplate',
+      url: '/previewTemplate',
       component: 'previewTemplate'
     })
     .state('previewFrame', {
-      ur: 'previewFrame',
+      url: '/previewFrame',
       component: 'previewFrame'
+    })
+    .state('customizePayload', {
+      url: '/customizePayload',
+      component: 'customizePayload'
+    })
+    .state('publish', {
+      url: '/publish',
+      component: 'publish'
     });
 }

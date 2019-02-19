@@ -1,7 +1,19 @@
 <!-- Masthead -->
-<header class="masthead">
+<header class="masthead preview-mode">
     <div class="container h-100 main-info-section">
         <h3>Preview Selected Integration Templates</h3>
-        <iframe class="container h-100 main-info-section" src={{$ctrl.currentProjectUrl}}></iframe>
+        <div id="previewTemplateIFrame" class="container h-100">
+            <iframe class="container h-100" ng-click="$ctrl.useTemplate()" src={{$ctrl.currentProjectUrl}}></iframe>
+        </div>
     </div>
 </header>
+
+<script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-header">
+        <h6 class="modal-title" id="modal-title">Do you want to customize API payloads?</h6>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="$ctrl.customizePayload()">Yes</button>
+        <button class="btn btn-warning" type="button" ng-click="$ctrl.continueExport()">No</button>
+    </div>
+</script>

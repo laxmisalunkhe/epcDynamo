@@ -1,5 +1,5 @@
 /* eslint-disable */
-export const mockInitData = [
+export const mockInitData = 
 	{
 		"category": [
 			{"key": "credit", "value": "CREDIT"},
@@ -34,6 +34,7 @@ export const mockInitData = [
         "APIList": [
             {
                 "key": "generateAuthToken",
+                "title": "Generate Auth Token",
                 "url": "/api/v1/security/sessiontoken",
                 "methodType": "POST",
                 "headers": [
@@ -52,6 +53,7 @@ export const mockInitData = [
             },
             {
                 "key": "getLandingPage",
+                "title": "Get Landing Page",
                 "url": "/services/v1/partners/{{partner_id}}/landingPage",
                 "methodType": "POST",
                 "headers": [
@@ -73,5 +75,4 @@ export const mockInitData = [
                 }
             }
         ]
-	}
-];
+	};
