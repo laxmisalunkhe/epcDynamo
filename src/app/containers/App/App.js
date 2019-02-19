@@ -1,7 +1,13 @@
-
+/* eslint-disable */
 class AppController {
-  constructor() {
+  constructor($state) {
+    this.$state = $state;
     this.filter = true;
+    this.selected = undefined;
+  }
+
+  submit() {
+    this.$state.go('chooseTemplate');
   }
 }
 

@@ -1,9 +1,50 @@
 <!-- Masthead -->
 <header class="masthead">
-    <div class="container h-100">
-        <h1 class="text-white">Start by answering a few questions</h1>
+    <div class="container h-100 main-info-section">
+        <h3>Start by answering a few questions</h3>
         <form name="mainInformationForm" class="main">
-            <label class="text-white">Test</label>
+            <div class="form-group">
+                <label for="provider">Service Category</label>
+                <input name="provider" id="provider" type="text" placeholder="Category Ex. Credit, Appraisal or Verification" ng-model="$ctrl.category" 
+                    class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="vendor">Vendor</label>
+                <input name="vendor" id="vendor" type="text" placeholder="Provider Ex. Sharper Lending, Title etc." ng-model="$ctrl.vendor" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="technology">UI Technology</label>
+                <input name="technology" id="technology" type="text" placeholder="Select technlogy Ex. Native, Angular or React" ng-model="$ctrl.technology" class="form-control">
+            </div>
+            <div class="form-group custom-checkbox">
+                <label for="featureList">Integration Feature List</label>
+                <div>
+                    <label>
+                        <input name="featureList" id="featureList" type="checkbox" disabled checked="true" ng-model="$ctrl.featureList">
+                        Common features like Login, Notifications, Order & View Order
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input name="featureList" id="featureList" type="checkbox" ng-model="$ctrl.featureList">
+                        Missing Fields
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input name="featureList" id="featureList" type="checkbox" ng-model="$ctrl.featureList">
+                        Manage Password
+                    </label>
+                </div>
+                
+                <div>
+                    <label>
+                        <input name="featureList" id="featureList" type="checkbox" ng-model="$ctrl.featureList">
+                        Smart Client support
+                    </label>
+                </div>
+            </div>
+            <button class="btn btn-success" type="submit" ng-click="$ctrl.submit()">Next</button>
         </form>
     </div>
 </header>

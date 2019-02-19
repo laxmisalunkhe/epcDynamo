@@ -13,5 +13,13 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('app', {
       url: '/app',
       component: 'app'
+    })
+    .state('chooseTemplate', {
+      url: '/chooseTemplate',
+      component: 'chooseTemplate'
+    })
+    .state('previewTemplate', {
+      ur: 'previewTemplate',
+      component: 'previewTemplate'
     });
 }
